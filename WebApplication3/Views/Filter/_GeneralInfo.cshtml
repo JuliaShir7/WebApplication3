@@ -1,0 +1,67 @@
+﻿@using WebApplication3.Models.FilterModels;
+@model FilterViewModel
+
+
+<div class="filter">
+    <div class="combobox">
+        <input class="drop" id="regions" name="city" type="text" placeholder="Выберите город" onkeyup="filter()">
+        <ul class="drop">
+            @for (int i = 0; i < Model.Cities.Count; i++)
+            {
+                <li>@Model.Cities[i]</li>
+            }
+        </ul>
+    </div>
+    <div class="radios">
+        <div class="infoblock" id="radiobuttons">
+            <label for="group" id="title">Состав группы</label>
+            <label>@Html.RadioButton("group", "Один человек", new {@id = "Один человек" }) Один человек</label>
+            <label>@Html.RadioButton("group", "Пара", new {@id = "Пара" }) Пара</label>
+            <label>@Html.RadioButton("group", "Семья с ребенком/детьми", new {@id = "Семья с ребенком/детьми" }) Семья с ребенком/детьми</label>
+            <label>@Html.RadioButton("group", "Группа людей (друзей, знакомых)", new {@id = "Группа людей (друзей, знакомых)" }) Группа людей (друзей, знакомых)</label>
+        </div>
+        <div class="infoblock" id="radiobuttons">
+            <label for="group-max-age" id="title" name="maxages">Возрастная группа старшего участника</label>
+            @foreach (var old in Model.OldAge)
+            {
+                <label>@Html.RadioButton("oldage", old.Name, old.IsSelected, new {@id = old.Name }) @old.Name</label>
+            }
+
+        </div>
+        <div class="infoblock" id="radiobuttons">
+            <label for="group-min-age" id="title">Возрастная группа младшего участника</label>
+            @foreach (var young in Model.YoungAge)
+            {
+                <label>@Html.RadioButton("youngage", young.Name, young.IsSelected, new {@id = young.Name }) @young.Name</label>
+            }
+        </div>
+    </div>
+    <div class="secondblock">
+        <div class="infoblock">
+            <div class="dates">
+                <label for="start">Дата начала поездки:</label>
+                <input type="date" id="start" name="trip_start" />
+            </div>
+            <div class="dates">
+                <label for="start">Дата окончания поездки:</label>
+                <input type="date" id="start" name="trip_end" />
+            </div>
+        </div>
+
+        <div class="infoblock" id="radiobuttons">
+            <label for="transport" id="title">Транспорт для вашего путешествия</label>
+            @foreach (var transport in Model.Transport)
+            {
+                <label>@Html.RadioButton("transport", transport.Name, transport.IsSelected, new {@id = transport.Name }) @transport.Name</label>
+            }
+        </div>
+    </div>
+    <partial name="_Categories.cshtml" />
+    @*<partial name="_Cuisine.cshtml" />*@
+    <partial name="_Food.cshtml" />
+
+</div>
+<script src="~/js/dropdown.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8= sha256-T+aPohYXbm0fRYDpJLr+zJ9RmYTswGsahAoIsNiMld4=" crossorigin="anonymous"></script>
+<script src="~/js/script1.js"></script>
+@*<script src="~/js/limit.js"></script>*@

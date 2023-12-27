@@ -1,0 +1,18 @@
+﻿@using WebApplication3.Models.FilterModels;
+@model FilterModelDTO
+
+@{
+    ViewData["Title"] = "Ввод параметров для подбора";
+}
+
+
+@using (Html.BeginForm("FinalFilter", "Filter", FormMethod.Post))
+{
+    <div class="filter">
+        <partial name="_TopPlaces.cshtml" />
+    </div>
+
+    <p>
+        <input type="submit" value="Продолжить" id="finalfilterbutton" class="button" />
+    </p>
+}

@@ -1,0 +1,477 @@
+﻿@using WebApplication3.Models.FilterModels;
+@model FilterViewModel
+
+
+<div class="categories">
+    <div class="liked">
+        <div class="categoryName">
+            <p>Выберите привлекательные категории мест:</p>
+            <div class="categoriesName">
+                <span class="imdiz-open" id="imdiz-open">@Model.CategoriesViewModel[0].Name</span>
+                <span class="imdiz-open" id="imdiz-open-1">@Model.CategoriesViewModel[1].Name</span>
+                <span class="imdiz-open" id="imdiz-open-2">@Model.CategoriesViewModel[2].Name</span>
+                <span class="imdiz-open" id="imdiz-open-3">@Model.CategoriesViewModel[3].Name</span>
+                <span class="imdiz-open" id="imdiz-open-4">@Model.CategoriesViewModel[4].Name</span>
+                <span class="imdiz-open" id="imdiz-open-5">@Model.CategoriesViewModel[5].Name</span>
+                <span class="imdiz-open" id="imdiz-open-6">@Model.CategoriesViewModel[6].Name</span>
+                <span class="imdiz-open" id="imdiz-open-7">@Model.CategoriesViewModel[7].Name</span>
+                <span class="imdiz-open" id="imdiz-open-8">@Model.CategoriesViewModel[8].Name</span>
+                <span class="imdiz-open" id="imdiz-open-9">@Model.CategoriesViewModel[9].Name</span>
+                <span class="imdiz-open" id="imdiz-open-10">@Model.CategoriesViewModel[10].Name</span>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[0].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[0].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[0].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[0].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[0].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-1">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[1].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[1].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[1].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[1].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[1].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-2">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[2].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[2].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[2].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[2].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[2].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-3">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[3].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[3].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[3].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[3].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[3].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-4">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[4].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[4].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[4].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[4].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[4].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-5">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[5].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[5].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[5].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[5].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[5].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-6">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[6].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[6].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[6].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[6].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[6].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-7">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[7].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[7].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[7].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[7].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[7].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-8">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[8].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[8].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[8].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[8].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[8].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-9">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[9].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[9].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[9].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[9].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[9].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-10">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[10].SubCategoriesViewModel.LikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[10].SubCategoriesViewModel.LikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[10].SubCategoriesViewModel.LikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[10].SubCategoriesViewModel.LikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[10].SubCategoriesViewModel.LikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="disliked">
+        <partial name="_Cuisine.cshtml" />
+    </div>
+   @* <div class="disliked">
+        <div class="categoryName">
+            <p>Выберите НЕ привлекательные категории мест:</p>
+            <div class="categoriesName">
+                <span class="imdiz-open" id="imdiz-open-20">@Model.CategoriesViewModel[0].Name</span>
+                <span class="imdiz-open" id="imdiz-open-21">@Model.CategoriesViewModel[1].Name</span>
+                <span class="imdiz-open" id="imdiz-open-22">@Model.CategoriesViewModel[2].Name</span>
+                <span class="imdiz-open" id="imdiz-open-23">@Model.CategoriesViewModel[3].Name</span>
+                <span class="imdiz-open" id="imdiz-open-24">@Model.CategoriesViewModel[4].Name</span>
+                <span class="imdiz-open" id="imdiz-open-25">@Model.CategoriesViewModel[5].Name</span>
+                <span class="imdiz-open" id="imdiz-open-26">@Model.CategoriesViewModel[6].Name</span>
+                <span class="imdiz-open" id="imdiz-open-27">@Model.CategoriesViewModel[7].Name</span>
+                <span class="imdiz-open" id="imdiz-open-28">@Model.CategoriesViewModel[8].Name</span>
+                <span class="imdiz-open" id="imdiz-open-29">@Model.CategoriesViewModel[9].Name</span>
+                <span class="imdiz-open" id="imdiz-open-30">@Model.CategoriesViewModel[10].Name</span>
+            </div>
+        </div>
+
+
+        <div class="imdiz-modal" id="imdiz-modal-20">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[0].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[0].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[0].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[0].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[0].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+
+        <div class="imdiz-modal" id="imdiz-modal-21">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[1].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[1].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[1].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[1].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[1].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-22">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[2].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[2].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[2].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[2].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[2].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-23">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[3].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[3].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[3].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[3].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[3].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+
+        <div class="imdiz-modal" id="imdiz-modal-24">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[4].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[4].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[4].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[4].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[4].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-25">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[5].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[5].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[5].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[5].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[5].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-26">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[6].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[6].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[6].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[6].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[6].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-27">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[7].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[7].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[7].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[7].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[7].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-28">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[8].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[8].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[8].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[8].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[8].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-29">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[9].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[9].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[9].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[9].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[9].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="imdiz-modal" id="imdiz-modal-30">
+            <span class="imdiz-close"></span> <!-- это для закрытия -->
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int j = 0; j < Model.CategoriesViewModel[10].SubCategoriesViewModel.DislikedSubCategories.Count; j++)
+                    {
+                        <label class="checkbox style-dl">
+                            @Html.CheckBoxFor(m =>  Model.CategoriesViewModel[10].SubCategoriesViewModel.DislikedSubCategories[j].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.CategoriesViewModel[10].SubCategoriesViewModel.DislikedSubCategories[j].Name)</div>
+                            @Html.HiddenFor(m => Model.CategoriesViewModel[10].SubCategoriesViewModel.DislikedSubCategories[j].ID)
+                            @Html.HiddenFor(m =>  Model.CategoriesViewModel[10].SubCategoriesViewModel.DislikedSubCategories[j].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>*@
+
+    </div>
+</div>
+
+@*<table>
+    @for (int i = 0; i < Model.GoodCitiesList.Count(); i++)
+    {
+        <tr>
+            <td>
+                @Html.CheckBoxFor(m =>  Model.GoodCitiesList[i].IsSelected)
+            </td>
+            <td>
+                @Html.DisplayFor(m => Model.GoodCitiesList[i].Name)
+                @Html.HiddenFor(m => Model.GoodCitiesList[i].ID)
+                @Html.HiddenFor(m =>  Model.GoodCitiesList[i].Name)
+            </td>
+        </tr>
+    }
+    @for (int i = 0; i < Model.BadCitiesList.Count(); i++)
+    {
+        <tr>
+            <td>
+                @Html.CheckBoxFor(m =>  Model.BadCitiesList[i].IsSelected)
+            </td>
+            <td>
+                @Html.DisplayFor(m => Model.BadCitiesList[i].Name)
+                @Html.HiddenFor(m => Model.BadCitiesList[i].ID)
+                @Html.HiddenFor(m =>  Model.BadCitiesList[i].Name)
+            </td>
+        </tr>
+    }
+</table>
+*@
+
+@*    <input type="submit" value="Submit" />*@

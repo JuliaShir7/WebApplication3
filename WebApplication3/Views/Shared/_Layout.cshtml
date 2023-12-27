@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Esteban&family=STIX+Two+Text&display=swap" rel="stylesheet">
+    <title>@ViewData["Title"] - WebApplication3</title>
+   @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+@*    <link rel="stylesheet" href="~/WebApplication3.styles.css" asp-append-version="true" />*@
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="icon">
+                <!-- <img src="/" alt="icon"> -->
+                <p>Wanderlust</p>
+            </div>
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><h1>Главная</h1></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><h1>Построить маршрут</h1></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index"><h1>Поиск мест</h1></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Filter" asp-action="Index">Filter</a>
+                </li>
+                <!--  <li class="nav-item">
+                     <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index"><h1>User</h1></a>
+                 </li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <p>footer</p>
+    </footer>
+
+    @*<footer class="border-top footer text-muted">
+        <div class="container">
+           @* &copy; 2023 - WebApplication3 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+           <p>Some footer info</p>
+        </div>
+    </footer>*@
+ @*   <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

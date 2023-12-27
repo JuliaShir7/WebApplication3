@@ -1,0 +1,44 @@
+﻿@using WebApplication3.Models.FilterModels;
+@model FilterModelDTO
+
+
+<div name="top_form" class="top-objects">
+    <div class="top_block">
+        <span>Выберите до 3х мест, которые Вы обязательно хотите увидеть в маршруте из предложенного списка</span>
+        <div class="checkboxes-group">
+            <div class="checkboxes__item">
+                @for (int j = 0; j < Model.TopPlacesViewModel.TopPlacesLiked.Count; j++)
+                {
+                    <label class="checkbox style-l">
+                        @Html.CheckBoxFor(m =>  Model.TopPlacesViewModel.TopPlacesLiked[j].IsSelected)
+                        <div class="checkbox__checkmark"></div>
+                        <div class="checkbox__body">@Html.DisplayFor(m => Model.TopPlacesViewModel.TopPlacesLiked[j].Name)</div>
+                        @Html.HiddenFor(m => Model.TopPlacesViewModel.TopPlacesLiked[j].ID)
+                        @Html.HiddenFor(m =>  Model.TopPlacesViewModel.TopPlacesLiked[j].Name)
+                    </label>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="top_block">
+        <span>Выберите до 3х мест, которые Вы НЕ хотите увидеть в маршруте из предложенного списка</span>
+        <div class="checkboxes-group">
+            <div class="checkboxes__item">
+                @for (int j = 0; j < Model.TopPlacesViewModel.TopPlacesDisliked.Count; j++)
+                {
+                    <label class="checkbox style-dl">
+                        @Html.CheckBoxFor(m =>  Model.TopPlacesViewModel.TopPlacesDisliked[j].IsSelected)
+                        <div class="checkbox__checkmark"></div>
+                        <div class="checkbox__body">@Html.DisplayFor(m => Model.TopPlacesViewModel.TopPlacesDisliked[j].Name)</div>
+                        @Html.HiddenFor(m => Model.TopPlacesViewModel.TopPlacesDisliked[j].ID)
+                        @Html.HiddenFor(m =>  Model.TopPlacesViewModel.TopPlacesDisliked[j].Name)
+                    </label>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<partial name="_Criterias.cshtml" />
+
+<script src="~/js/limit.js"></script>

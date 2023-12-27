@@ -1,0 +1,26 @@
+﻿@using WebApplication3.Models.FilterModels;
+@model FilterViewModel
+
+<div class="filter">
+    <div class="food">
+        <div class="foodrestrictions">
+            <div class="categoryName">
+                <p>Выберите ограничения в питании, если таковые имеются:</p>
+            </div>
+            <div class="checkboxes-group">
+                <div class="checkboxes__item">
+                    @for (int i = 0; i < Model.FoodRestrictions.Count; i++)
+                    {
+                        <label class="checkbox style-l">
+                            @Html.CheckBoxFor(m =>  Model.FoodRestrictions[i].IsSelected)
+                            <div class="checkbox__checkmark"></div>
+                            <div class="checkbox__body">@Html.DisplayFor(m => Model.FoodRestrictions[i].Name)</div>
+                            @Html.HiddenFor(m => Model.FoodRestrictions[i].ID)
+                            @Html.HiddenFor(m =>  Model.FoodRestrictions[i].Name)
+                        </label>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿@using WebApplication3.Models.FilterModels;
+@model FilterViewModel
+
+@{
+    ViewData["Title"] = "Ввод параметров для подбора";
+}
+<h3>Выберите или введите параметры для фильтрации объектов и формирования Вашего маршрута</h3>
+@using (Html.BeginForm("GeneralFilter", "Filter", FormMethod.Post))
+{
+    <div class="imdiz-overlay"></div>
+    Html.RenderPartial("_GeneralInfo");
+
+    <p>
+        <input type="submit" value="Submit" id="filterbutton" class="button" />
+    </p>
+}

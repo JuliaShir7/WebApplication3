@@ -1,0 +1,49 @@
+﻿@using WebApplication3.Models.FilterModels;
+@model CitiesViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@*@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <table>
+   
+       
+        @for (int i = 0; i < Model.GoodCitiesList.Count(); i++)
+        {
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(m =>  Model.GoodCitiesList[i].IsSelected)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => Model.GoodCitiesList[i].Name)
+                    @Html.HiddenFor(m => Model.GoodCitiesList[i].ID)
+                    @Html.HiddenFor(m =>  Model.GoodCitiesList[i].Name)
+                </td>
+            </tr>
+        }
+        @for (int i = 0; i < Model.BadCitiesList.Count(); i++)
+        {
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(m =>  Model.BadCitiesList[i].IsSelected)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => Model.BadCitiesList[i].Name)
+                    @Html.HiddenFor(m => Model.BadCitiesList[i].ID)
+                    @Html.HiddenFor(m =>  Model.BadCitiesList[i].Name)
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <input type="submit" value="Submit" />
+}*@
+
+
+

@@ -1,0 +1,57 @@
+﻿@using WebApplication3.Models.FilterModels;
+@model FilterViewModel
+
+<div class="cuisines">
+    <div class="liked-c">
+        <div class="cusineName">
+            <p>Выберите привлекательные кухни &#x25BC;</p>
+            <div class="categoriesName">
+                <span class="imdiz-open" id="imdiz-open-40">Открыть полный список</span>
+            </div>
+        </div>
+    </div>
+    @*<div class="disliked-c">
+        <div class="cuisineName">
+            <p>Выберите нежелательные кухни &#x25BC;</p>
+            <div class="categoriesName">
+                <span class="imdiz-open" id="imdiz-open-41">Открыть полный список</span>
+            </div>
+        </div>
+    </div>*@
+
+    <div class="imdiz-modal" id="imdiz-modal-40">
+        <span class="imdiz-close"></span> <!-- это для закрытия -->
+        <div class="checkboxes-group">
+            <div class="checkboxes__item">
+                @for (int i = 0; i < Model.Cuisines.LikedCuisines.Count; i++)
+                {
+                    <label class="checkbox style-l">
+                        @Html.CheckBoxFor(m =>  Model.Cuisines.LikedCuisines[i].IsSelected)
+                        <div class="checkbox__checkmark"></div>
+                        <div class="checkbox__body">@Html.DisplayFor(m => Model.Cuisines.LikedCuisines[i].Name)</div>
+                        @Html.HiddenFor(m => Model.Cuisines.LikedCuisines[i].ID)
+                        @Html.HiddenFor(m =>  Model.Cuisines.LikedCuisines[i].Name)
+                    </label>
+                }
+            </div>
+        </div>
+    </div>
+
+    @*<div class="imdiz-modal" id="imdiz-modal-41">
+        <span class="imdiz-close"></span> <!-- это для закрытия -->
+        <div class="checkboxes-group">
+            <div class="checkboxes__item">
+                @for (int i = 0; i < Model.Cuisines.DislikedCuisines.Count; i++)
+                {
+                    <label class="checkbox style-dl">
+                        @Html.CheckBoxFor(m =>  Model.Cuisines.DislikedCuisines[i].IsSelected)
+                        <div class="checkbox__checkmark"></div>
+                        <div class="checkbox__body">@Html.DisplayFor(m => Model.Cuisines.DislikedCuisines[i].Name)</div>
+                        @Html.HiddenFor(m => Model.Cuisines.DislikedCuisines[i].ID)
+                        @Html.HiddenFor(m =>  Model.Cuisines.DislikedCuisines[i].Name)
+                    </label>
+                }
+            </div>
+        </div>
+    </div>*@
+</div>
